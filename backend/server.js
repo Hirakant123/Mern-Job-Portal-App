@@ -26,6 +26,15 @@ const app = express();
 
 app.use(
   cors({
+    origin: "https://mern-job-portal-app-gmi5.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
+
+app.use(
+  cors({
     origin: [
       "http://localhost:5173"
     ],
